@@ -1,0 +1,2 @@
+ #Asszinkron adatelérés
+ axios használatával
