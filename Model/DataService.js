@@ -1,3 +1,4 @@
+
 class DataService {
   constructor() {}
   getData(apivegpont,callback,hibaCallback) {
@@ -25,3 +26,4 @@ class DataService {
 }
 
 export default DataService;
+
