@@ -1,13 +1,13 @@
 import TablazatSorView from "./TablazatSorView.js";
 class AdatView {
   #lista = [];
-
-  constructor(lista, szuloElem) {
+    #leiro
+  constructor(lista, szuloElem,leiro) {
     this.#lista = lista;
-
+    this.#leiro = leiro;
     szuloElem.append(`<table class= table >`);
     this.tablaElem = szuloElem.children("table");
-
+    console.log(leiro)
     this.megjelenit();
   }
   megjelenit() {
@@ -18,8 +18,8 @@ class AdatView {
   }
   fejlec() {
     let txt = "<tr>";
-    for (const key in this.#lista[0]) {
-      txt += `<th>${key}</th>`;
+    for (const key in this.#leiro) {
+      txt += `<th>${this.#leiro[key].megj}</th>`;
     }
     txt += `</tr>`;
 

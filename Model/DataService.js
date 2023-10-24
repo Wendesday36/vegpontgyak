@@ -1,7 +1,7 @@
 
 class DataService {
   constructor() {}
-  getData(apivegpont,callback,hibaCallback) {
+  getData(apivegpont,callback,hibaCallback,leiro) {
     axios
       .get(apivegpont)
       .then(function (response) {
@@ -12,7 +12,7 @@ class DataService {
         console.log("Statusz szoveg", response.statusText);
         console.log("Valasz fejlec", response.headers);
         console.log("Valasz config", response.config); */
-        callback(response.data.nevek)
+        callback(response.data.nevek,leiro)
       })
       .catch(function (error) {
         // handle error
