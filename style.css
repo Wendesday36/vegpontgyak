@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(245, 246, 246);
+  }
+  table,
+  td {
+    border: 1px solid black;
+  }
+  table{
+      margin: 10px;
+      width: 100%;
+  }
+  main{
+    width: 80%;
+    margin: auto;
+  }
