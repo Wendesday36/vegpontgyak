@@ -6,7 +6,7 @@ class TablazatSor{
       
       this.#sor();
       this.index=index
-      this.sorElem = this.tablaElem.children("tr:last-child");
+      this.sorElem = this.tablaElem.children("tbody").children("tr:last-child");
       this.pipa = this.sorElem.children("td").children(".kesz");
       this.megse = this.sorElem.children("td").children(".megse");
       this.torol = this.sorElem.children("td").children(".torol");
@@ -37,7 +37,7 @@ class TablazatSor{
     }
     #sor() {
       let txt = "";
-  
+      txt+="<tbody>"
       txt += "<tr>";
       for (const key in this.#adat) {
         const element = this.#adat[key];
@@ -47,6 +47,7 @@ class TablazatSor{
       <span   class="kesz">✅</span> 
       <span   class="megse" >❌</span> </td>`;
       txt += `</tr>`;
+      txt+="</tbody>"
   
       this.tablaElem.append(txt);
     }

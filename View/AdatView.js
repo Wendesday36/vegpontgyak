@@ -5,7 +5,7 @@ class AdatView {
   constructor(lista, szuloElem,leiro) {
     this.#lista = lista;
     this.#leiro = leiro;
-    szuloElem.append(`<table class= table >`);
+    szuloElem.append(`<table class= table table-danger table-hover >`);
     this.tablaElem = szuloElem.children("table");
     console.log(leiro)
     this.megjelenit();
@@ -17,7 +17,8 @@ class AdatView {
     });
   }
   fejlec() {
-    let txt = "<tr>";
+    let txt = "<thead>";
+    txt+="<tr>"
     for (const key in this.#leiro) {
       txt += `<th>${this.#leiro[key].megj}</th>`;
     }
